@@ -82,6 +82,7 @@ function App() {
           <div className="close" onClick={() => chatApi.setShowMessageDetails(false)}>X</div>
           <h2>Liked By:</h2>
           <ul>
+          // @ts-ignore
             {chatApi.selectedMessage.likes!.map((userId) => {
               const likedUser = chatApi.users.find(user => user.id === userId);
               return likedUser && (
