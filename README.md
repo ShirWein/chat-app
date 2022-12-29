@@ -1,12 +1,9 @@
-# chat-app
+# 🤖 chat-app 🤖
 
 This app is a frontend implementation for a chat application, using mock data.
 
-It's created with Vite, using React, TypeScript and Sass.
-
 ## Instructions
-1. Fork this repository to your GitHub.
-2. Clone the repository from your fork.
-3. Run `npm install`
-4. Run `npm start`
-5. Edit according to your needs. Commit and push.
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm start` (starting the chat-app)
+4. Run `npm run server` (starting the server using nodemon)
