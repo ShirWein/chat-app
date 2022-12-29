@@ -19,6 +19,7 @@ function App() {
 
     <div className="App">
       <div className="chat">
+        <h1><center>🤖 Chat App 🤖</center></h1>
         {chatApi.messages.map(message => (
           <div className="message" key={message.id}>
             <div className="message-header">
