@@ -5,10 +5,8 @@ import cors from 'cors';
 const app = express();
 const port = 5555;
 app.use(cors({origin: "http://localhost:5173"}));
-app.use(express.json());
-
-// app.use('/mockMessages', messages);
-// app.use('/mockUsers', users);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}))
 
 
 
@@ -30,10 +28,10 @@ app.get('/', (req, res) => {
 });
 
 //* get the list of name+id of all the users:
-// app.get('/mockUsers/:id', (req, res) => {
-//   messagesWithAuthorName();
-//   return res.send(messagesWithAuthorName());
-// });
+app.get('/mockUsers', (req, res) => {
+  const namesAndIds = mockUserDetails.map(item => ({ id: item.id, name: item.name })); 
+  return res.send(namesAndIds);
+});
 
 
 //* port listen:

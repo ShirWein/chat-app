@@ -9,8 +9,9 @@ const endpoint = 'http://localhost:5555'; // todo: add endpoint (server) address
  **/
 export async function getMessages() {
   // todo: replace this with fetch to get the messages from the server
-  const res = await fetch(`${endpoint}/mockMessages`);
-  return (await res.json());
+  const result = await fetch(`${endpoint}`);
+  const data = await result.json()
+  return data;
 }
 
 /**
@@ -19,7 +20,8 @@ export async function getMessages() {
 export async function getUsers() {
   // todo: replace this with fetch to get the user list from the server
   const result = await fetch(`${endpoint}/mockUsers`);
-  return (await result.json());
+  const data = await result.json()
+  return data;
 }
 
 
@@ -31,7 +33,8 @@ export async function getUserDetails(userId: number) {
   //  For mocking example, we're calling an external JSON service.
   //  You can use mockUserDetails.ts for the list of user details in the server.
   const result = await fetch(`${endpoint}/mockUsers/${userId}`);
-  return (await result.json())[0];
+  const data = await result.json();
+  return data[0];
 }
 
 /**
